@@ -1,5 +1,42 @@
 execute pathogen#infect()
 
+
+"General congiguration
+"--------------------------------------------------
+
+"mappings
+map <f2> :SyntasticCheck<CR>
+map <f3> :SyntasticToggleMode<CR>
+
+
+
+"indentation
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set smartindent
+
+"color
+"set background=dark
+"colorscheme gruvbox
+
+"others
+Helptags "Without this you can't see plugin help from inside vim
+set number
+set nocompatible      " We're running Vim, not Vi!
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+setlocal foldmethod=syntax
+set encoding=utf-8
+
+
+"vim plugin configuration
+"--------------------------------------------------
+
 "vim-airline configuration
 
 "vim-fugitive configuration
@@ -10,25 +47,29 @@ execute pathogen#infect()
 map <C-\> :NERDTreeToggle<CR>
 
 "ctrlp.vim configuration
+set wildignore+=*/venv/*,*.so,*.swp,*.zip 
 
-"ale configuration
-"to toggle ale use :ALEToggle
+"vim-ruby configuration
 
+"syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-"mappings
-map <f2> :ALEToggle<CR>
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_ruby_checkers = ['rubocop']
 
-"indentation
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set autoindent
-set smartindent
+"vimtex configuration
 
+"youcompleteme configuration
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
-"others
-syntax on
-filetype plugin indent on
-set number
+"currently uninstalled"
+"--------------------------------------------------
+
 
