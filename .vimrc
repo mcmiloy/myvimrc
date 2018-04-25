@@ -1,5 +1,15 @@
-execute pathogen#infect()
-
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'valloric/youcompleteme'
+Plugin 'morhetz/gruvbox'
+call vundle#end()
 
 "General congiguration
 "--------------------------------------------------
@@ -23,7 +33,6 @@ set smartindent
 "colorscheme gruvbox
 
 "others
-Helptags "Without this you can't see plugin help from inside vim
 set number
 set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
