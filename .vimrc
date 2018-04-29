@@ -7,7 +7,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
 Plugin 'morhetz/gruvbox'
 call vundle#end()
 
@@ -75,10 +75,9 @@ let g:syntastic_ruby_checkers = ['rubocop']
 
 "vimtex configuration
 
-"youcompleteme configuration
-let g:ycm_python_binary_path = '/usr/bin/python3'
 
 "currently uninstalled"
 "--------------------------------------------------
 
-
+"youcompleteme configuration
+"let g:ycm_python_binary_path = '/usr/bin/python3'
